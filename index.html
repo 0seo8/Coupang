@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>내비게이션 및 푸터 - 쿠팡(Coupang)</title>
+  <link rel="icon" href="./assets/favicon/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./stylesheets/main.css" />
+  <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="loginBar">
+      <!-- 로그인바 -->
+      <ul class="loginBar__list">
+        <li class="loginBar__item"><a href="#" class="loginBar__link">로그인</a></li>
+        <li class="loginBar__item"><a href="#" class="loginBar__link">회원가입</a></li>
+        <li class="loginBar__item"><a href="#" class="loginBar__link">고객센터</a></li>
+        <li class="loginBar__item"><a href="#" class="loginBar__link">쿠팡플레이</a></li>
+        <li class="loginBar__item"><a href="#" class="loginBar__link">제휴마케팅</a></li>
+      </ul>
+    </div>
+    <div class="header__inner">
+      <!-- 로고 -->
+      <h1 class="brand">
+        <a href="https://www.coupang.com" class="brand__link" target="_blank" rel="noopener noreferrer">
+          <figure class="logo logo--ir logo--colorful">
+            <span class="sr-only">Coupang</span>
+          </figure>
+        </a>
+      </h1>
+      <!-- 카테로기버튼 -->
+      <button type="button" class="button--category">카테고리</button>
+      <!-- 검색 폼  -->
+      <form action="/" class="searchForm" method="GET">
+        <fieldset>
+          <legend class="sr-only">검색 폼</legend>
+          <div class="searchForm__wrapper">
+            <div class="formSelect">
+              <select class="formSelect__select" name="searchCategory" id="searchCategory" aria-label="검색 카테고리 검색">
+                <option>전체</option>
+                <option>여성패션</option>
+                <option>남성패션</option>
+                <option>남녀 공용 의류</option>
+                <option>유아동패션</option>
+                <option>뷰티</option>
+              </select>
+              <svg class="iconDown" width="9" height="6" viewBox="0 0 9 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 0H0L4.69565 6L9 0Z" fill="#767676" />
+              </svg>
+            </div>
+            <div class="formInput">
+              <label for="searchKeyword" class="sr-only">검색어</label>
+              <input type="search" class="formInput__input" id="searchKeyword" placeholder="찾고 싶은 상품을 검색해보세요!" required>
+            </div>
+            <button type="button" class="button--search" aria-label="검색"></button>
+            <button type="button" class="button--voiceSearch" aria-label="음성검색"></button>
+          </div>
+        </fieldset>
+      </form>
+      <!-- 마이쿠팡영역 -->
+      <div class="myCoupang">
+        <button type="button" class="button button--myCoupang">마이쿠팡</button>
+        <ul class="myCoupang__list">
+          <li class="myCoupang__item"><a href="/" class="myCoupang__link">주문목록</a></li>
+          <li class="myCoupang__item"><a href="/" class="myCoupang__link">취소/반품</a></li>
+          <li class="myCoupang__item"><a href="/" class="myCoupang__link">찜리스트</a></li>
+        </ul>
+      </div>
+      <!-- 장바구니 영역 -->
+      <div class="cart">
+        <div class="cart__buttonWrapper">
+          <button type="button" class="button button--cart">장바구니</button>
+          <span class="sr-only">상품 개수</span><strong class="cartProductCount">0</strong>
+        </div>
+        <div class="cart__detail">
+          <div class="cart__empty">장바구니에 담긴 상품이 없습니다.</div>
+        </div>
+      </div>
+      <!-- 유형별 링크목록 -->
+      <div class="typeNavigation">
+        <ul class="typeNavigation__list">
+          <li class="typeNavigation__item"><a href="/" class="typeNavigation__link"><img src="./assets/icon/icon-rocket.svg" class="badge--rocket">로켓배송</a></li>
+          <li class="typeNavigation__item"><a href="/" class="typeNavigation__link"><img src="./assets/icon/icon-fresh.svg" class="badge--rocket">로켓프레시</a></li>
+          <li class="typeNavigation__item"><a href="/" class="typeNavigation__link">2022년 설날<img src="./assets/icon/new.svg" alt="New" class="badge--new"></a></li>
+          <li class="typeNavigation__item"><a href="/" class="typeNavigation__link">로켓직구</a></li>
+          <li class="typeNavigation__item"><a href="/" class="typeNavigation__link">골든박스</a></li>
+          <li class="typeNavigation__item"><a href="/" class="typeNavigation__link">정기배송</a></li>
+          <li class="typeNavigation__item"><a href="/" class="typeNavigation__link">이벤트/쿠폰</a></li>
+          <li class="typeNavigation__item"><a href="/" class="typeNavigation__link">기획전</a></li>
+          <li class="typeNavigation__item"><a href="/" class="typeNavigation__link">여행티켓</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navigation">
+    <!-- 내비게이션 영역 -->
+    <!-- 내비게이션 제목 -->
+    <h2 class="sr-only">카테고리별 메인메뉴</h2>
+    <div class="navigation__inner">
+      <!-- 카테고리별 내비게이션(메뉴) 영역 -->
+      <ul class="navigation__list navigation__listDepth1">
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-clothes"></span>패션의류
+          </a>
+          <ul class="navigation__listDepth2 is--active" id="fashionClothes">
+            <li class="navigation__item">
+              <a href="/" class="navigation__button" role="button" aria-expanded="false" aria-controls="womanFashion">
+                여성패션
+              </a>
+              <ul class="navigation__listDepth3" id="womanFashion">
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">의류</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">속옷/잠옷</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">신발</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navigation__item">
+              <a href="/" class="navigation__button" role="button" aria-expanded="false" aria-controls="womanFashion">
+                남성패션
+              </a>
+              <ul class="navigation__listDepth3" id="womanFashion">
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">의류(남)</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">속옷/잠옷</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">신발</a>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-beauty"></span>뷰티
+          </a>
+          <ul class="navigation__listDepth2 is--active" id="fashionClothes">
+            <li class="navigation__item">
+              <a href="/" class="navigation__button" role="button" aria-expanded="false" aria-controls="womanFashion">
+                스킨 케어
+              </a>
+              <ul class="navigation__listDepth3" id="womanFashion">
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">스킨</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">로션</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">에센스</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-baby"></span>출산/유아동
+          </a>
+          <ul class="navigation__listDepth2 is--active" id="fashionClothes">
+            <li class="navigation__item">
+              <a href="/" class="navigation__button" role="button" aria-expanded="false" aria-controls="womanFashion">
+                베이비패션
+              </a>
+              <ul class="navigation__listDepth3" id="womanFashion">
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">의류</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">보행기</a>
+                </li>
+                <li class="navigation__item">
+                  <a href="/" class="navigation__link">잡화</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-foods"></span>식품
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-appliances"></span>주방용품
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-houseware"></span>생활용품
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-interior"></span>인테리어
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-foods"></span>가전디지털
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-sports"></span>스포츠
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-car"></span>자동차용품
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-book"></span>도서음반
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-toy"></span>완구취미
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-stationery"></span>문구오피스
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-pet"></span>반려동물
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-travel"></span>여행티켓
+          </a>
+        </li>
+        <li class="navigation__item">
+          <a href="/" role="button" class="navigation__button" aria-expanded="false" aria-controls="fashionClothes">
+            <span class="icon-theme"></span>테마관 <img src="./assets/icon/new.svg" alt="New" class="badge--new">
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    <!-- 메인 콘텐츠 영역 -->
+    <!-- 해당 영역은 추가적인 마크업없이 비워놓아 주세요. -->
+
+    <!-- 오늘의 쇼핑 제안 -->
+    <section class="offer">
+      <h2 class="offer__title">오늘의 쇼핑 제안</h2>
+      <ul class="offer__list">
+        <li class="offer__item">
+          <a href="/" class="offer__link">
+            <div class="product">
+              <figure class="product__card">
+                <img src="./assets/offer/furniture.jpg" alt="" />
+                <figcaption class="product__caption">
+                  솔로리빙 셀린 렌지대 600 800 주방 수납장 템바보드 전자레인지 밥솥 에어프라이어 주방정리 수납장
+                </figcaption>
+              </figure>
+              <div class="product__discount">
+                <span class="sr-only">할인율</span>
+                <span class="discount">30%</span>
+              </div>
+              <div class="product__ratingStar">
+                <span class="sr-only">구매자 평점</span>
+                <span class="ratingStar score4-5" aria-label="5점 만점에 4.5점"></span>
+              </div>
+              <div class="product__review">
+                <span class="sr-only">리뷰 수</span>
+                <span class="review">(3,255)</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="offer__item">
+          <a href="/" class="offer__link">
+            <div class="product">
+              <figure class="product__card">
+                <img src="./assets/offer/renton.jpg" alt="" />
+                <figcaption class="product__caption">
+                  옆 동네몰 레트로 LED 감성 캠핑 랜턴 노란빛 대, 빈티지 브론즈
+                </figcaption>
+              </figure>
+              <div class="product__delivery">
+                <span class="sr-only">배송유형</span>
+                <img src="./assets/icon/badge-rocket.svg" alt="로켓배송">
+              </div>
+              <div class="product__ratingStar">
+                <span class="sr-only">구매자 평점</span>
+                <span class="ratingStar score4-5" aria-label="5점 만점에 4.5점"></span>
+              </div>
+              <div class="product__review">
+                <span class="sr-only">리뷰 수</span>
+                <span class="review">(1,807)</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="offer__item">
+          <a href="/" class="offer__link">
+            <div class="product">
+              <figure class="product__card">
+                <img src="./assets/offer/drying-rack.jpg" alt="" />
+                <figcaption class="product__caption">
+                  프리미엄 부착식 식기건조대 (600~900)AL 싱크대선반 씽크선반 주방선반, 선택-2) 프리미엄 식기건조대 800AL
+                </figcaption>
+              </figure>
+              <div class="product__delivery">
+                <span class="sr-only">배송유형</span>
+                <span class="free">무료배송</span>
+              </div>
+              <div class="product__ratingStar">
+                <span class="sr-only">구매자 평점</span>
+                <span class="ratingStar score4" aria-label="5점 만점에 4점"></span>
+              </div>
+              <div class="product__review">
+                <span class="sr-only">리뷰 수</span>
+                <span class="review">(2,423)</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="offer__item">
+          <a href="/" class="offer__link">
+            <div class="product">
+              <figure class="product__card">
+                <img src="./assets/offer/boohgle.jpg" alt="" />
+                <figcaption class="product__caption">
+                  타지 않는 냄비 보오글 네모 6종 풀세트(51가지 안전시험 인증, hBN 세라믹 코팅)
+                </figcaption>
+              </figure>
+              <div class="product__discount">
+                <span class="sr-only">할인율</span>
+                <span class="discount">10%</span>
+              </div>
+              <div class="product__delivery">
+                <span class="sr-only">배송유형</span>
+                <img src="./assets/icon/badge-rocket.svg" alt="로켓배송">
+              </div>
+              <div class="product__ratingStar">
+                <span class="sr-only">구매자 평점</span>
+                <span class="ratingStar score5" aria-label="5점 만점에 5점"></span>
+              </div>
+              <div class="product__review">
+                <span class="sr-only">리뷰 수</span>
+                <span class="review">(1,009)</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="offer__item">
+          <a href="/" class="offer__link">
+            <div class="product">
+              <figure class="product__card">
+                <img src="./assets/offer/deskset.jpg" alt="" />
+                <figcaption class="product__caption">
+                  베스트리빙 베이직 멀티 H형 1200 철제 책상세트, 화이트
+                </figcaption>
+              </figure>
+              <div class="product__discount">
+                <span class="sr-only">할인율</span>
+                <span class="discount">25%</span>
+              </div>
+              <div class="product__delivery">
+                <span class="sr-only">배송유형</span>
+                <span class="free">무료배송</span>
+              </div>
+              <div class="product__ratingStar">
+                <span class="sr-only">구매자 평점</span>
+                <span class="ratingStar score4" aria-label="5점 만점에 4점"></span>
+              </div>
+              <div class="product__review">
+                <span class="sr-only">리뷰 수</span>
+                <span class="review">(3,203)</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+
+    <!-- 오늘의 발견 영역 -->
+    <section class="discovery">
+      <div class="discovery__headline">
+        <h2 class="discovery__title">오늘의 발견</h2>
+        <span class="divider">|</span>
+        <p class="discovery__subtitle">오늘 쿠팡이 엄선한 가장 핫한 제품</p>
+      </div>
+      <ul class="discovery__list">
+        <li class="discovery__item">
+          <a href="/" class="discovery__link cardLink--large">
+            <img src="./assets/discovery/honeytea.jpg" alt="따뜻한 차 향기 오뚜기 꿀 생강차" class="discovery__image">
+            <span class="discovery__button" aria-label="구매하기"></span>
+          </a>
+        </li>
+        <li class="discovery__item">
+          <a href="/" class="discovery__link cardLink--large">
+            <img src="./assets/discovery/vaseline.jpg" alt="바셀린 런칭 기념" class="discovery__image">
+            <span class="discovery__button" aria-label="구매하기"></span>
+          </a>
+        </li>
+        <li class="discovery__item">
+          <a href="/" class="discovery__link cardLink--small">
+            <img src="./assets/discovery/handcream.jpg" alt="kamill 핸드크림 모음" class="discovery__image">
+            <span class="discovery__button" aria-label="구매하기"></span>
+          </a>
+        </li>
+        <li class="discovery__item">
+          <a href="/" class="discovery__link cardLink--small">
+            <img src="./assets/discovery/bibs.jpg" alt="빕스 아기사랑" class="discovery__image">
+            <span class="discovery__button" aria-label="구매하기"></span>
+          </a>
+        </li>
+        <li class="discovery__item">
+          <a href="/" class="discovery__link cardLink--small">
+            <img src="./assets/discovery/hanssem.jpg" alt="한샘 수납장 모음" class="discovery__image">
+            <span class="discovery__button" aria-label="구매하기"></span>
+          </a>
+        </li>
+        <li class="discovery__item">
+          <a href="/" class="discovery__link cardLink--small">
+            <img src="./assets/discovery/dumpling.jpg" alt="개성 왕만두" class="discovery__image">
+            <span class="discovery__button" aria-label="구매하기"></span>
+          </a>
+        </li>
+        <li class="discovery__item">
+          <a href="/" class="discovery__link cardLink--large">
+            <img src="./assets/discovery/wettissue.jpg" alt="올담 물티슈" class="discovery__image">
+            <span class="discovery__button" aria-label="구매하기"></span>
+          </a>
+        </li>
+        <li class="discovery__item">
+          <a href="/" class="discovery__link cardLink--small">
+            <img src="./assets/discovery/febreze.jpg" alt="향균 99.9% 페브리즈" class="discovery__image">
+            <span class="discovery__button" aria-label="구매하기"></span>
+          </a>
+        </li>
+        <li class="discovery__item">
+          <a href="/" class="discovery__link cardLink--small">
+            <img src="./assets/discovery/dyson.jpg" alt="다이슨 청소기 특가" class="discovery__image">
+            <span class="discovery__button" aria-label="구매하기"></span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 카테고리별 섹션 -->
+
+    <section class="category">
+      <div class="category__headline">
+        <h2 class="category__title">카테고리별 <span class="category__title--accent">추천! 광고상품</span></h2>
+        <em class="category__enTitle" lang="em">HOT! TREND</em>
+      </div>
+  
+      <article class="categoryUnit houseware">
+        <div class="categoryUnit__group">
+          <!-- 생활용품 헤드라인 -->
+          <div class="categoryUnit__headline">
+            <h3 class="categoryUnit__title">생활용품</h3>
+            <a href="/" class="categoryUnit__goLink">바로가기</a>
+          </div>
+          <!-- 해시태크 -->
+          <div class="hashTag">
+            <strong class="hashTag__title">HOT키워드</strong>
+            <ul class="hashTag__list">
+              <li class="hashTag__item"><a href="" class="hashTag__link">#바디오일</a></li>
+              <li class="hashTag__item"><a href="" class="hashTag__link">#액체세제</a></li>
+              <li class="hashTag__item"><a href="" class="hashTag__link">#화장실방향제</a></li>
+              <li class="hashTag__item"><a href="" class="hashTag__link">#엠보싱물티슈</a></li>
+              <li class="hashTag__item"><a href="" class="hashTag__link">#두피비듬샴푸</a></li>
+              <li class="hashTag__item"><a href="" class="hashTag__link">#뽑아쓰는키친타올</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="categoryUnit__group">
+          <!-- 캐러셀 UI -->
+          <div class="carousel" role="region" aria-roledescription="carousel" aria-label="생활용품 슬라이드 배너">
+            <!-- 캐러셀 목록의 id와 인디케이터의 aria-controls 속성의 값은 고유한 이름을 가질 수 있도록 유형에 맞춰 수정이 필요함. -->
+            <div class="carousel__controles">
+              <button type="button" class="carousel__indicator is--active" aria-label="2개의 배너 중 1번 배너 보기" aria-controls="housewareSlideBanner"></button>
+              <button type="button" class="carousel__indicator" aria-label="2개의 배너 중 2번 배너 보기" aria-controls="housewareSlideBanner"></button>
+            </div>
+            <div class="carousel__list" id="housewareSlideBanner" aira-live="off" >
+              <div class="carousel__item is--active" role="group" aria-roledescription="slide" aria-label="2개의 배너 중 1번째">
+                <a href="/" class="carousel__link">
+                  <figure class="carousel__slide">
+                    <img src="./assets/slides/houseware-downy.jpg" alt="" class="carousel__image">
+                    <figcaption class="carousel__caption">
+                      <strong class="carousel__caption--large">최초의 99.9% 향균</strong>
+                      <span class="carousel__caption--small">세균 냄새 걱정 없이 상쾌하게!</span>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="carousel__item" role="group" aria-roledescription="slide" aria-label="2개의 배너 중 2번째">
+                <a href="/" class="carousel__link">
+                  <figure class="carousel__slide">
+                    <img src="./assets/slides/houseware-dandruff.jpg" alt="" class="carousel__image">
+                    <figcaption class="carousel__caption">
+                      <strong class="carousel__caption--large">비듬완화 임상완료</strong>
+                      <span class="carousel__caption--small">닥터방기원 댄드러프</span>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="categoryUnit__group">
+          <!-- 상품 카드 링크 -->
+          <ul class="categoryUnit__list">
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/houseware/houseware-basket.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">왕타 칫솔 바스켓 앤 커버 10p+걸이 5p+바구니 </figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="sr-only">판매가</span>
+                    <em class="product__price" role="text">12,900 <span class="currencyUnit">원</span></em>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/houseware/houseware-hairoil.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">로레알파리 엑스트라 오디네리 헤어오일 엑스트라 리치</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="sr-only">판매가</span>
+                    <em class="product__price" role="text">10,200<span class="currencyUnit">원</span></em>
+                    <span class="sr-only">배송유형</span>
+                    <span class="product__delivery"><img src="./assets/icon/badge-rocket.svg" alt="로켓배송"></span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/houseware/houseware-cleaningcloth.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">데일리워터 물걸레 청소포 대형리필 30매, 10팩</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="priceInstant">즉시할인가</span>
+                    <em class="product__price" role="text">15,410<span class="currencyUnit">원</span></em>
+                    <span class="sr-only">배송유형</span>
+                    <span class="product__delivery"><img src="./assets/icon/badge-rocket.svg" alt="로켓배송"></span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/houseware/houseware-massagestick.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">트로비스 핸드형 마사지 스택, 1개, 블루</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="priceWow">로켓와우할인가</span>
+                    <em class="product__price" role="text">5,740<span class="currencyUnit">원</span></em>
+                    <span class="sr-only">배송유형</span>
+                    <span class="product__delivery"><img src="./assets/icon/badge-rocket.svg" alt="로켓배송"></span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/houseware/houseware-dryingrack.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">모던홈 탱크건조대 2단 특대, 1개</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="sr-only">판매가</span>
+                    <em class="product__price" role="text">28,550<span class="currencyUnit">원</span></em>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/houseware/houseware-mask.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">웹킵스 황사방역마스크 KF94, 초소형 1개입 25개</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="sr-only">판매가</span>
+                    <em class="product__price" role="text">16,900<span class="currencyUnit">원</span></em>
+                    <span class="sr-only">배송유형</span>
+                    <span class="product__delivery"><img src="./assets/icon/badge-rocket.svg" alt="로켓배송"></span>
+                  </div>
+                </div>
+              </a>
+            </li>
+  
+          </ul>
+        </div>
+      </article>
+  
+      <article class="categoryUnit kitchenware">
+        <div class="categoryUnit__group">
+          <!-- 생활용품 헤드라인 -->
+          <div class="categoryUnit__headline">
+            <h3 class="categoryUnit__title">주방용품</h3>
+            <a href="/" class="categoryUnit__goLink">바로가기</a>
+          </div>
+          <!-- 해시태크 -->
+          <div class="hashTag">
+            <strong class="hashTag__title">HOT키워드</strong>
+            <ul class="hashTag__list">
+              <li class="hashTag__item"><a href="" class="hashTag__link">#니트릴장갑</a></li>
+              <li class="hashTag__item"><a href="" class="hashTag__link">#시리얼디스펜서</a></li>
+              <li class="hashTag__item"><a href="" class="hashTag__link">#와플팬</a></li>
+              <li class="hashTag__item"><a href="" class="hashTag__link">#텀블러</a></li>
+              <li class="hashTag__item"><a href="" class="hashTag__link">#양념통</a></li>
+              <li class="hashTag__item"><a href="" class="hashTag__link">#수세미</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="categoryUnit__group">
+          <!-- 캐러셀 UI -->
+          <div class="carousel" role="region" aria-roledescription="carousel" aria-label="생활용품 슬라이드 배너">
+            <!-- 캐러셀 목록의 id와 인디케이터의 aria-controls 속성의 값은 고유한 이름을 가질 수 있도록 유형에 맞춰 수정이 필요함. -->
+            <div class="carousel__controles">
+              <button type="button" class="carousel__indicator is--active" aria-label="2개의 배너 중 1번 배너 보기" aria-controls="housewareSlideBanner"></button>
+              <button type="button" class="carousel__indicator" aria-label="2개의 배너 중 2번 배너 보기" aria-controls="housewareSlideBanner"></button>
+            </div>
+            <div class="carousel__list" id="housewareSlideBanner" aira-live="off" >
+              <div class="carousel__item is--active" role="group" aria-roledescription="slide" aria-label="2개의 배너 중 1번째">
+                <a href="/" class="carousel__link">
+                  <figure class="carousel__slide">
+                    <img src="./assets/slides/kitchenware-tumbler.jpg" alt="" class="carousel__image">
+                    <figcaption class="carousel__caption">
+                      <strong class="carousel__caption--large">텀블러</strong>
+                      <span class="carousel__caption--small">실용성에 디자인까지, 착한 텀블러</span>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+              <div class="carousel__item" role="group" aria-roledescription="slide" aria-label="2개의 배너 중 2번째">
+                <a href="/" class="carousel__link">
+                  <figure class="carousel__slide">
+                    <img src="./assets/slides/kitchenware-lunchbox.jpg" alt="" class="carousel__image">
+                    <figcaption class="carousel__caption">
+                      <strong class="carousel__caption--large">보온 도시락</strong>
+                      <span class="carousel__caption--small">맛있는 온도로 유지되는 집밥!</span>
+                    </figcaption>
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="categoryUnit__group">
+          <!-- 상품 카드 링크 -->
+          <ul class="categoryUnit__list">
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/kitchenware/kitchenware-kitchentowel.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">코디 아름드리 Size Up 키친타올 250매, 12롤, 1팩</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="sr-only">판매가</span>
+                    <em class="product__price" role="text">14,300<span class="currencyUnit">원</span></em>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/kitchenware/kitchenware-airfryer.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">니코 에어프라이어 오븐겸용 5.2L, DWAF-5.5NK</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="sr-only">판매가</span>
+                    <em class="product__price" role="text">37,800<span class="currencyUnit">원</span></em>
+                    <span class="sr-only">배송유형</span>
+                    <span class="product__delivery"><img src="./assets/icon/badge-rocket.svg" alt="로켓배송"></span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/kitchenware/kitchenware-paperfoil.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">착한식재료, 종이호일 30cm X 20m, 2개</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="priceInstant">즉시할인가</span>
+                    <em class="product__price" role="text">11,400<span class="currencyUnit">원</span></em>
+                    <span class="sr-only">배송유형</span>
+                    <span class="product__delivery"><img src="./assets/icon/badge-rocket.svg" alt="로켓배송"></span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/kitchenware/kitchenware-zipperbag.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">기본에 크린지퍼백 소형 100매, 5개</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="priceWow">로켓와우할인가</span>
+                    <em class="product__price" role="text">5,740<span class="currencyUnit">원</span></em>
+                    <span class="sr-only">배송유형</span>
+                    <span class="product__delivery"><img src="./assets/icon/badge-rocket.svg" alt="로켓배송"></span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/kitchenware/kitchenware-paperspoon.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">메이그린 친환경 종이 위생 스푼, 10개입, 10개</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="sr-only">판매가</span>
+                    <em class="product__price" role="text">4,850<span class="currencyUnit">원</span></em>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="categoryUnit__item">
+              <a href="/" class="categoryUnit__link">
+                <div class="product">
+                  <figure class="product__card">
+                    <img src="./assets/category/kitchenware/kitchenware-illycoffee.jpg" alt="" class="product__image">
+                    <figcaption class="porduct__caption">일리 아라비카 셀렉션 브라질 캡슐커피, 120g 1개</figcaption>
+                  </figure>
+                  <div class="product__detail">
+                    <span class="sr-only">판매가</span>
+                    <em class="product__price" role="text">12,415<span class="currencyUnit">원</span></em>
+                    <span class="sr-only">배송유형</span>
+                    <span class="product__delivery"><img src="./assets/icon/badge-rocket.svg" alt="로켓배송"></span>
+                  </div>
+                </div>
+              </a>
+            </li>
+  
+          </ul>
+        </div>
+      </article>
+  
+    </section>
+  
+
+
+  </main>
+
+  <footer class="footer">
+    <!-- 푸터 영역 -->
+    <!-- 푸터 관련 콘텐츠는 .footer 영역 안에 마크업 해주세요. -->
+
+    <!-- 안내 링크목록 -->
+    <div class="customerGuide">
+      <ul class="customerGuide__list">
+        <li class="customerGuide__item"><a href="/" class="customerGuide__link">인재채용</a></li>
+        <li class="customerGuide__item"><span class="divider"></span><a href="/" class="customerGuide__link">입점/제휴문의</a>
+        </li>
+        <li class="customerGuide__item"><span class="divider"></span><a href="/" class="customerGuide__link">공지사항</a>
+        </li>
+        <li class="customerGuide__item"><span class="divider"></span><a href="/" class="customerGuide__link">고객의 소리</a>
+        </li>
+        <li class="customerGuide__item"><span class="divider"></span><a href="/"
+            class="customerGuide__link"><strong>개인정보 처리방안</strong></a></li>
+        <li class="customerGuide__item"><span class="divider"></span><a href="/" class="customerGuide__link">쿠팡페이
+            이용약관</a></li>
+        <li class="customerGuide__item"><span class="divider"></span><a href="/"
+            class="customerGuide__link"><strong>쿠팡페이 개인정보 처리방안</strong></a></li>
+        <li class="customerGuide__item"><span class="divider"></span><a href="/" class="customerGuide__link">신뢰관리센터</a>
+        </li>
+        <li class="customerGuide__item"><span class="divider"></span><a href="/" class="customerGuide__link">제휴마케팅</a>
+        </li>
+        <li class="customerGuide__item"><span class="divider"></span><a href="/" class="customerGuide__link">광고안내</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 쿠팡 고객센터 및 관련정보영역 -->
+    <div class="coupangInformation">
+      <!-- 로고 -->
+      <figure class="logo logo--ir logo--mono">
+        <span class="sr-only">Coupang</span>
+      </figure>
+
+      <!-- 고객센터 정보 목록 -->
+      <ul class="coupangInformation__list">
+        <li class="coupangInformation__item">
+          <span role="text">상호명 및 호스팅 서비스 제공<span aria-hidden="true"> : </span>쿠팡(주)</span>
+        </li>
+        <li class="coupangInformation__item">
+          <span role="text">대표이사<span aria-hidden="true"> : </span>강한송, 박태준</span>
+        </li>
+        <li class="coupangInformation__item">
+          <span role="text"><span class="sr-only">주소</span>서울시 송파구 송파대로 570</span>
+        </li>
+        <li class="coupangInformation__item">
+          <span role="text">사업자 등록번호<span aria-hidden="true"> : </span>120-88-00767</span>
+        </li>
+        <li class="coupangInformation__item">
+          <span role="text">통신판매업신고<span aria-hidden="true"> : </span>2017-서울송파-0680</span>
+        </li>
+      </ul>
+
+      <!-- 고객센터 정보 -->
+      <div class="customerCenter">
+        <!-- 고객센터 정보 링크 목록 -->
+        <ul class="customerCenter__list">
+          <li class="customerCenter__item">
+            <a href="/" class="customerCenter__link">365고객센터</a>
+          </li>
+          <li class="customerCenter__item">
+            <span class="divider"></span>
+            <a href="/" class="customerCenter__link">전자금융거래분쟁처리담당</a>
+          </li>
+        </ul>
+
+        <!-- 고객센터 전화번호 -->
+        <div class="customerCenter__telephone">
+          <span class="sr-only">대표 전화번호</span>
+          <a href="tel:15777011" class="customerCenter__telephoneLink">1577-7011</a>
+        </div>
+
+        <!-- 고객센터주소 -->
+        <div class="customerCenter__address" role="text">
+          <span class="sr-only">주소</span>서울시 송파구 송파대로 570
+        </div>
+
+        <!-- 고객센터 이메일  -->
+        <div class="customerCenter__email">
+          email <span aria-hidden="true">:</span>
+          <a href="mailto:help@coupang.com?subject=문의사항" class="customerCenter__emailLink">help@coupang.com</a>
+        </div>
+      </div>
+      <!-- 채무지급보중안내 -->
+      <div class="paymentGuarantee">
+        <strong class="paymentGuarantee__title">우리은행 채무지급보증 안내</strong>
+        <p class="paymentGuarantee__description">당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</p>
+      </div>
+    </div>
+
+    <!-- 저작권 및 SNS영역 -->
+    <div class="copyrightArea">
+      <div class="copyrightArea__inner">
+        <!-- 저작권 -->
+        <div class="copyright">
+          <span>사이버몰 내 판매되는 상품 중에는 쿠팡에 등록한 개별 판매자가 판매하는 마켓플레이스(오픈마켓) 상품이 포함되어 있습니다.</span>
+          <span>마켓플레이스(오픈마켓) 상품의 경우 쿠팡은 통신판매중개자이며 통신판매의 당사자가 아닙니다.</span>
+          <span>쿠팡은 마켓플레이스(오픈마켓) 상품, 거래정보 및 거래 등에 대하여 책임을 지지 않습니다.</span>
+          <span>쿠팡은 소비자 보호와 안전거래를 위해 신뢰관리센터(CM112@coupang.com)를 운영하고 있으며, 관련 분쟁이 발생할 경우 별도의 분쟁처리절차에 의거 분쟁이 처리됩니다.</span>
+          <small class="copyrightText">Copyright &copy; Coupang Corp. 2010-2020 All Right Reserved.</small>
+        </div>
+
+        <!-- sns -->
+        <div class="sns">
+          <ul class="sns__list">
+            <li class="sns__item">
+              <a href="https://www.facebook.com" class="sns__link facebook">
+                <img src="./assets/icon/sns-facebook.svg" alt="페이스북">
+              </a>
+            </li>
+            <li class="sns__item">
+              <a href="https://section.blog.naver.com/" class="sns__link naverBlog">
+                <img src="./assets/icon/sns-naver-blog.svg" alt="페이스북">
+              </a>
+            </li>
+            <li class="sns__item">
+              <a href="https://www.instagram.com/" class="sns__link instagram">
+                <img src="./assets/icon/sns-instagram.svg" alt="인스타그램">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
